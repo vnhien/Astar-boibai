@@ -4,6 +4,7 @@ import { useAppContext } from "../../Context/AppContext";
 import { IconGift } from "../../assets/icons/IconGift";
 import { useMemo, useState } from "react";
 import gifThinh from "../../assets/images/gifThinh.png";
+import gifHuy from "../../assets/images/gifHuy.png";
 import gifThinhDoan from "../../assets/images/gifThinhDoan.png";
 import { getZodiacNameFromDate } from "../../utils";
 
@@ -21,9 +22,16 @@ export default function CardContent() {
       ["đoàn trần thịnh", "doan tran thinh", "đoan tran thinh"].includes(usetname?.toLowerCase())
     ) {
       return gifThinhDoan;
-    } else {
+    }
+
+    if (
+      ["Nguyễn Đức Thịnh", "nguyen duc thinh", "nguyễn đức thịnh"].includes(usetname?.toLowerCase())
+    ) {
       return gifThinh;
     }
+
+    return gifThinh;
+    return gifHuy;
   }, [usetname]);
 
   const cardContent = cardConfig[team || "Tech"].find((item) => item.cardName === selectedCard);
