@@ -30,7 +30,6 @@ export default function CardContent() {
       return gifThinh;
     }
 
-    return gifThinh;
     return gifHuy;
   }, [usetname]);
 
