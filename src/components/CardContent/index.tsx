@@ -8,6 +8,7 @@ import gifHuy from "../../assets/images/gifHuy.png";
 import gifThinhDoan from "../../assets/images/gifThinhDoan.png";
 import { getZodiacNameFromDate } from "../../utils";
 
+const randomScore = Math.floor(Math.random() * 4) + 6;
 export default function CardContent() {
   const { selectedCard, team, usetname, birthday, setStep, setSelectedCard } = useAppContext();
   const [open, setOpen] = useState(false);
@@ -75,7 +76,7 @@ export default function CardContent() {
               height: "25px",
             }}
             fontWeight={500}
-          >{`${Math.floor(Math.random() * 4) + 6} điểm`}</Typography>
+          >{`${randomScore} điểm`}</Typography>
         </Box>
         <Grid container spacing={1}>
           <Grid size={{ xs: 12, sm: 6 }}>
