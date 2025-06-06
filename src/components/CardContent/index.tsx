@@ -49,7 +49,8 @@ export default function CardContent() {
           border: "1px solid",
           borderImageSource: "linear-gradient(101.7deg, #5F56CA 0.33%, #CC6AF1 100%)",
           p: 2,
-          borderRadius: 1,
+          borderRadius: 3,
+          overflow: "hidden",
           color: "#FFFFFF",
           "& .content": {
             fontWeight: 300,
@@ -59,9 +60,23 @@ export default function CardContent() {
           },
         }}
       >
-        <Typography variant="h3" fontWeight={700} sx={{ color: "#E0C7FF" }} mb={4}>
-          {`Tên Lá Bài: ${cardContent?.cardName}`}
-        </Typography>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Typography variant="h3" fontWeight={700} sx={{ color: "#E0C7FF" }} mb={4}>
+            {`Tên Lá Bài: ${cardContent?.cardName}`}
+          </Typography>
+          <Typography
+            component={"span"}
+            sx={{
+              backgroundColor: "#38B58C",
+              display: "inline-flex",
+              alignItems: "center",
+              px: 2,
+              borderRadius: 3,
+              height: "25px",
+            }}
+            fontWeight={500}
+          >{`${Math.floor(Math.random() * 4) + 6} điểm`}</Typography>
+        </Box>
         <Grid container spacing={1}>
           <Grid size={{ xs: 12, sm: 6 }}>
             <Typography className="label">
@@ -142,7 +157,8 @@ export default function CardContent() {
           border: "1px solid",
           borderImageSource: "linear-gradient(101.7deg, #5F56CA 0.33%, #CC6AF1 100%)",
           p: 2,
-          borderRadius: 1,
+          borderRadius: 3,
+          overflow: "hidden",
           color: "#FFFFFF",
           "& .content": {
             fontWeight: 300,
