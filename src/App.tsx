@@ -85,9 +85,23 @@ function App() {
               "@keyframes rotate": {
                 "0%": {
                   transform: "rotate(0deg)",
+                  opacity: 0.5,
+                },
+                "25%": {
+                  transform: "rotate(90deg)",
+                  opacity: 0.1,
+                },
+                "50%": {
+                  transform: "rotate(180deg)",
+                  opacity: 0.5,
+                },
+                "75%": {
+                  transform: "rotate(270deg)",
+                  opacity: 0.1,
                 },
                 "100%": {
                   transform: "rotate(360deg)",
+                  opacity: 0.5,
                 },
               },
               opacity: 0.5,
