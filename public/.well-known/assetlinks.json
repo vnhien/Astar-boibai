@@ -1,12 +1,9 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.anonymous.cryptobank",
-      "sha256_cert_fingerprints": [
-        "A6:F1:2B:B6:30:F9:C5:AD:C1:1D:97:73:FE:E5:44:C7:38:F1:4B:1E:D2:47:8F:89:81:3D:92:5D:88:13:84:B2"
-      ]
-    }
-  }
-]
+[{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target" : { "namespace": "android_app", "package_name": "com.anonymous.cryptobank",
+               "sha256_cert_fingerprints": ["A6:F1:2B:B6:30:F9:C5:AD:C1:1D:97:73:FE:E5:44:C7:38:F1:4B:1E:D2:47:8F:89:81:3D:92:5D:88:13:84:B2"] }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target" : { "namespace": "web", "site": "https://astar-boibai.vercel.app" }
+}]
